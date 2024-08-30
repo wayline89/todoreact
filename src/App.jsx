@@ -1,12 +1,24 @@
-import { useState } from 'react'
+import { useState } from "react";
+import ReactDOM from "react-dom";
+import Text from "./Text";
+
 
 function App() {
+  const [ShowText, setShowText] = useState(false);
 
-  return (
-    <>
-<h1 className='text-xl font-bold text-blue-500'>hello jglvn,b,nbn,b,nb </h1>
-    </>
-  )
+return(
+  <div className="App">
+<button 
+onClick={() => {
+  setShowText(!ShowText);
+}}>
+  Show Text 
+</button>
+{ShowText && <Text/>}
+  </div>
+)
+
 }
 
-export default App
+export default App;
+
